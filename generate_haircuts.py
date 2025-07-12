@@ -1,4 +1,4 @@
-mport requests
+import requests
 import json
 
 url = "https://google.serper.dev/images"
