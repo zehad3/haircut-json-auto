@@ -5,7 +5,7 @@ import json
 url = "https://google.serper.dev/images"
 s_key = os.getenv("SERPAPI_KEY")
 payload = json.dumps({
-  "q": "man haircurt"
+  "q": "korean style haircurt"
 })
 headers = {
   'X-API-KEY': s_key,
