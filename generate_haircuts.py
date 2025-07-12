@@ -5,7 +5,7 @@ import json
 url = "https://google.serper.dev/images"
 s_key = os.getenv("SERPAPI_KEY")
 payload = json.dumps({
-  "q": "korean style haircurt",
+  "q": "man haircurt",
   "num": 100,
   "tbs": "qdr:m"
 })
@@ -13,7 +13,6 @@ headers = {
   'X-API-KEY': s_key,
   'Content-Type': 'application/json'
 }
-print("✅ API KEY IS: " + (s_key if s_key else "❌ NOT FOUND"))
 response = requests.request("POST", url, headers=headers, data=payload)
 data =  response.json()
 data = [{"url":img['imageUrl']} for img in data['images']]
