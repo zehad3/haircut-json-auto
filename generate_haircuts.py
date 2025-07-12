@@ -3,7 +3,7 @@ import requests
 import json
 
 url = "https://google.serper.dev/images"
-s_key = os.getenv("SERPERAPI_KEY")
+s_key = os.getenv("SERPAPI_KEY")
 payload = json.dumps({
   "q": "man haircurt"
 })
