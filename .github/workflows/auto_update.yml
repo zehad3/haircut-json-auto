@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -22,9 +25,7 @@ jobs:
 
       - name: Generate haircuts.json
         run: python generate_haircuts.py
-        env:
-          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-
+        
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
