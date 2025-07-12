@@ -12,6 +12,8 @@ headers = {
   'Content-Type': 'application/json'
 }
 
+print("✅ API KEY Loaded:", "Yes" if s_key else "No ❌")
+
 response = requests.request("POST", url, headers=headers, data=payload)
 data =  response.json()
 data = [{"url":img['imageUrl']} for img in data['images']]
