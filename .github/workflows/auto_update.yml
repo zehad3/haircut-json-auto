@@ -2,8 +2,8 @@ name: Auto Update Haircut JSON
 
 on:
   schedule:
-    - cron: '8 4 * * *'  # everyday at 6 AM UTC
-  workflow_dispatch:      # manual run option
+    - cron: '0 0 * * *'  
+  workflow_dispatch:     
 
 jobs:
   build:
