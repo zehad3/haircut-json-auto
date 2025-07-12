@@ -12,7 +12,7 @@ headers = {
   'Content-Type': 'application/json'
 }
 
-print("✅ API KEY IS:" s_key)
+print("✅ API KEY IS:"+s_key)
 
 response = requests.request("POST", url, headers=headers, data=payload)
 data =  response.json()
